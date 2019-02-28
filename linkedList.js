@@ -62,6 +62,31 @@ class LinkedList {
     currNode.next = new _Node(item, currNode.next);
   }
 
+  insertAt(item, index) {
+    let counter = 0;
+    if (!this.head) {
+      return null;
+    }
+    if (index === 0) {
+      this.insertFirst(item);
+      return;
+    }
+    let currNode = this.head;
+    let prevNode = this.head;
+    while (counter !== index - 1) {
+      if (currNode.next === null) {
+        console.log('Index does not exist');
+        break;
+      }
+      else {
+        prevNode = currNode;
+        currNode = currNode.next;
+        counter++;
+      }
+    }
+    prevNode.next = new _Node(item, currNode.next);
+  }
+
   find(item) {
     let currNode = this.head;
     if (!this.head) {

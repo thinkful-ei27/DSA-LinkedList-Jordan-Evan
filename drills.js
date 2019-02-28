@@ -13,7 +13,8 @@ function main() {
   // console.log(JSON.stringify(SSL));
   // SSL.remove('squirrel');
   // SSL.insertAfter('squirrel', null);
-  console.log(JSON.stringify(SSL));
+  SSL.insertAt('squirrel', 8);
+  console.log(SSL);
   return SSL;
 }
 main();
