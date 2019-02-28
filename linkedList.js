@@ -77,8 +77,7 @@ class LinkedList {
       if (currNode.next === null) {
         console.log('Index does not exist');
         break;
-      }
-      else {
+      } else {
         prevNode = currNode;
         currNode = currNode.next;
         counter++;
@@ -124,4 +123,11 @@ class LinkedList {
   }
 }
 
-module.exports = LinkedList;
+function displaySLL(sll) {
+  console.log(JSON.stringify(sll));
+}
+
+module.exports = {
+  LinkedList,
+  displaySLL
+};
