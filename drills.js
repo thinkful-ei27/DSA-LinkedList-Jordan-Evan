@@ -1,23 +1,25 @@
-const { LinkedList, displaySLL, size, isEmpty } = require('./linkedList');
+const { LinkedList, displaySLL, size, isEmpty, findPrevious, findLast } = require('./linkedList');
 
-const SSL = new LinkedList();
+const SLL = new LinkedList();
 
 function main() {
-  SSL.insertFirst('Apollo');
-  SSL.insertLast('Boomer');
-  SSL.insertLast('Helo');
-  SSL.insertLast('Husker');
-  SSL.insertLast('Starbuck');
-  SSL.insertLast('Tauhida');
-  console.log(JSON.stringify(SSL));
-  SSL.remove('Tauhida');
-  console.log(JSON.stringify(SSL));
-  SSL.remove('squirrel');
-  SSL.insertAfter('squirrel', null);
-  SSL.insertAt('squirrel', 5);
-  displaySLL(SSL);
-  size(SSL);
-  isEmpty(SSL);
-  return SSL;
+  SLL.insertFirst('Apollo');
+  SLL.insertLast('Boomer');
+  SLL.insertLast('Helo');
+  SLL.insertLast('Husker');
+  SLL.insertLast('Starbuck');
+  SLL.insertLast('Tauhida');
+  // console.log(JSON.stringify(SLL));
+  // SLL.remove('Tauhida');
+  // console.log(JSON.stringify(SLL));
+  // SLL.remove('squirrel');
+  SLL.insertAfter('squirrel', null);
+  SLL.insertAt('squirrel', 5);
+  displaySLL(SLL);
+  size(SLL);
+  isEmpty(SLL);
+  findPrevious(SLL, 'Helo');
+  findLast(SLL);
+  return SLL;
 }
 main();

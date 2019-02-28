@@ -145,9 +145,46 @@ function isEmpty(sll) {
   }
 }
 
+function findPrevious(sll, item) {
+  if (!sll.head) {
+    return null;
+  }
+  if (sll.head.value === item) {
+    sll.insertFirst(item);
+    return;
+  }
+  let currNode = sll.head;
+  let prevNode = sll.head;
+  while (currNode.value !== item) {
+    if (currNode.next === null) {
+      return null;
+    } else {
+      prevNode = currNode;
+      currNode = currNode.next;
+    }
+  }
+  console.log(prevNode.value);
+  return;
+}
+
+function findLast(sll) {
+  if (sll.head === null) {
+    console.log('you aint got no list');
+  } else {
+    let tempNode = sll.head;
+    while (tempNode.next !== null) {
+      tempNode = tempNode.next;
+    }
+    console.log(tempNode.value);
+    return;
+  }
+}
+
 module.exports = {
   LinkedList,
   displaySLL,
   size,
-  isEmpty
+  isEmpty,
+  findPrevious,
+  findLast
 };
