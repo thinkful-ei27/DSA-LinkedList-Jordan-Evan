@@ -21,7 +21,20 @@ class LinkedList {
     }
   }
 
-
+  find(item) {
+    let currNode = this.head;
+    if (!this.head) {
+      return null;
+    }
+    while (currNode.value !== item) {
+      if (currNode.next === null) {
+        return null;
+      } else {
+        currNode = currNode.next;
+      }
+    }
+    return currNode;
+  }
 }
 
 module.exports = LinkedList;
