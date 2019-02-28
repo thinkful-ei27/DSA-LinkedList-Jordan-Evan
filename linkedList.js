@@ -134,7 +134,8 @@ function size(sll) {
     tempNode = tempNode.next;
     counter++;
   }
-  console.log(counter);
+  // console.log(counter);
+  return counter;
 }
 
 function isEmpty(sll) {
@@ -176,9 +177,19 @@ function findLast(sll) {
       tempNode = tempNode.next;
     }
     console.log(tempNode.value);
-    return;
+    return tempNode.value;
   }
 }
+
+function findFirst(sll) {
+  if (sll.head === null) {
+    console.log('you aint got no list');
+  } else {
+    return sll.head.value;
+  }
+}
+
+
 
 module.exports = {
   LinkedList,
@@ -186,5 +197,6 @@ module.exports = {
   size,
   isEmpty,
   findPrevious,
-  findLast
+  findLast,
+  findFirst
 };
