@@ -1,4 +1,4 @@
-const { LinkedList, displaySLL, size } = require('./linkedList');
+const { LinkedList, displaySLL, size, isEmpty } = require('./linkedList');
 
 const SSL = new LinkedList();
 
@@ -9,14 +9,15 @@ function main() {
   SSL.insertLast('Husker');
   SSL.insertLast('Starbuck');
   SSL.insertLast('Tauhida');
-  // console.log(JSON.stringify(SSL));
-  // SSL.remove('Tauhida');
-  // console.log(JSON.stringify(SSL));
-  // SSL.remove('squirrel');
-  // SSL.insertAfter('squirrel', null);
+  console.log(JSON.stringify(SSL));
+  SSL.remove('Tauhida');
+  console.log(JSON.stringify(SSL));
+  SSL.remove('squirrel');
+  SSL.insertAfter('squirrel', null);
   SSL.insertAt('squirrel', 5);
   displaySLL(SSL);
   size(SSL);
+  isEmpty(SSL);
   return SSL;
 }
 main();

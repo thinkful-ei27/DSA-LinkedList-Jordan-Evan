@@ -137,9 +137,17 @@ function size(sll) {
   console.log(counter);
 }
 
+function isEmpty(sll) {
+  if (sll.head === null) {
+    console.log('List is empty');
+  } else {
+    console.log('Wow a list');
+  }
+}
 
 module.exports = {
   LinkedList,
   displaySLL,
-  size
+  size,
+  isEmpty
 };
