@@ -12,7 +12,7 @@ function main() {
   // SSL.remove('Tauhida');
   // console.log(JSON.stringify(SSL));
   // SSL.remove('squirrel');
-  SSL.insertBefore('squirrel', 'Apollo');
+  // SSL.insertAfter('squirrel', null);
   console.log(JSON.stringify(SSL));
   return SSL;
 }
