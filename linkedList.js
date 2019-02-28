@@ -21,6 +21,27 @@ class LinkedList {
     }
   }
 
+  insertBefore(item, key) {
+    if (!this.head) {
+      return null;
+    }
+    if (this.head.value === key) {
+      this.insertFirst(item);
+      return;
+    }
+    let currNode = this.head;
+    let prevNode = this.head;
+    while (currNode.value !== key) {
+      if (currNode.next === null) {
+        return null;
+      } else {
+        prevNode = currNode;
+        currNode = currNode.next;
+      }
+    }
+    prevNode.next = new _Node(item, currNode);
+  }
+
   find(item) {
     let currNode = this.head;
     if (!this.head) {

@@ -8,10 +8,12 @@ function main() {
   SSL.insertLast('Husker');
   SSL.insertLast('Starbuck');
   SSL.insertLast('Tauhida');
+  // console.log(JSON.stringify(SSL));
+  // SSL.remove('Tauhida');
+  // console.log(JSON.stringify(SSL));
+  // SSL.remove('squirrel');
+  SSL.insertBefore('squirrel', 'Apollo');
   console.log(JSON.stringify(SSL));
-  SSL.remove('Tauhida');
-  console.log(JSON.stringify(SSL));
-  SSL.remove('squirrel');
   return SSL;
 }
 main();
