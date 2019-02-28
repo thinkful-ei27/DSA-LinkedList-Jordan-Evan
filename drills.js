@@ -1,4 +1,4 @@
-const { LinkedList, displaySLL } = require('./linkedList');
+const { LinkedList, displaySLL, size } = require('./linkedList');
 
 const SSL = new LinkedList();
 
@@ -16,6 +16,7 @@ function main() {
   // SSL.insertAfter('squirrel', null);
   SSL.insertAt('squirrel', 5);
   displaySLL(SSL);
+  size(SSL);
   return SSL;
 }
 main();

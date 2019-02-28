@@ -127,7 +127,19 @@ function displaySLL(sll) {
   console.log(JSON.stringify(sll));
 }
 
+function size(sll) {
+  let counter = 1;
+  let tempNode = sll.head;
+  while (tempNode.next !== null) {
+    tempNode = tempNode.next;
+    counter++;
+  }
+  console.log(counter);
+}
+
+
 module.exports = {
   LinkedList,
-  displaySLL
+  displaySLL,
+  size
 };
